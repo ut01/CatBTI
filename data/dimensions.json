@@ -2,7 +2,7 @@
   "models": {
     "S": {
       "cn": "自我模型",
-      "en_approx": "Self Model",
+      "注": "创 BTI 五模型之一：自尊、自洽、价值感——创始人版「我到底是谁」。",
       "dimensions": [
         "S1",
         "S2",
@@ -11,7 +11,7 @@
     },
     "E": {
       "cn": "情感模型",
-      "en_approx": "Emotion/Attachment Model",
+      "注": "创 BTI 五模型之一：依恋、投入、边界——恋爱与工作群都能套用的情感频道。",
       "dimensions": [
         "E1",
         "E2",
@@ -20,7 +20,7 @@
     },
     "A": {
       "cn": "态度模型",
-      "en_approx": "Attitude Model",
+      "注": "创 BTI 五模型之一：信不信任世界、守不守规矩、人生有没有奔头。",
       "dimensions": [
         "A1",
         "A2",
@@ -29,7 +29,7 @@
     },
     "Ac": {
       "cn": "行动驱力模型",
-      "en_approx": "Action Drive Model",
+      "注": "创 BTI 五模型之一：动机、拍板、落地——死线战士还是计划控。",
       "dimensions": [
         "Ac1",
         "Ac2",
@@ -38,7 +38,7 @@
     },
     "So": {
       "cn": "社交模型",
-      "en_approx": "Social Model",
+      "注": "创 BTI 五模型之一：出门社交、人际距离、场面话几层皮。",
       "dimensions": [
         "So1",
         "So2",

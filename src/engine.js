@@ -1,5 +1,5 @@
 /**
- * SBTI 评分引擎 — 纯函数，无 DOM 依赖
+ * ChuangBTI 评分引擎 — 纯函数，无 DOM 依赖
  */
 
 /**
@@ -51,9 +51,10 @@ export function parsePattern(pattern) {
  * @param {Object} userLevels  { S1: 'H', S2: 'L', ... }
  * @param {Array}  dimOrder    ['S1','S2','S3','E1',...]
  * @param {string} pattern     "HHH-HMH-MHH-HHH-MHM"
+ * @param {number} maxDistance 理论最大曼哈顿距离（与 `config.scoring.maxDistance` 一致，用于相似度分母）
  * @returns {{ distance: number, exact: number, similarity: number }}
  */
-export function matchType(userLevels, dimOrder, pattern) {
+export function matchType(userLevels, dimOrder, pattern, maxDistance = 30) {
   const typeLevels = parsePattern(pattern)
   let distance = 0
   let exact = 0
@@ -66,7 +67,8 @@ export function matchType(userLevels, dimOrder, pattern) {
     if (diff === 0) exact++
   }
 
-  const similarity = Math.max(0, Math.round((1 - distance / 30) * 100))
+  const denom = Math.max(1, maxDistance)
+  const similarity = Math.max(0, Math.round((1 - distance / denom) * 100))
   return { distance, exact, similarity }
 }
 
@@ -76,13 +78,19 @@ export function matchType(userLevels, dimOrder, pattern) {
  * @param {Array}   dimOrder     维度顺序
  * @param {Array}   standardTypes 标准类型数组
  * @param {Array}   specialTypes  特殊类型数组
- * @param {Object}  options      { isDrunk: boolean }
+ * @param {Object}  options      { isDrunk?: boolean, maxDistance?: number, fallbackThreshold?: number }
  * @returns {{ primary: Object, secondary: Object|null, rankings: Array, mode: string }}
  */
 export function determineResult(userLevels, dimOrder, standardTypes, specialTypes, options = {}) {
+  const {
+    isDrunk = false,
+    maxDistance = 30,
+    fallbackThreshold = 60,
+  } = options
+
   const rankings = standardTypes.map((type) => ({
     ...type,
-    ...matchType(userLevels, dimOrder, type.pattern),
+    ...matchType(userLevels, dimOrder, type.pattern, maxDistance),
   }))
 
   // 排序：距离升序 → 精准命中降序 → 相似度降序
@@ -93,7 +101,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
   const hhhh = specialTypes.find((t) => t.code === 'HHHH')
 
   // 酒鬼覆盖
-  if (options.isDrunk && drunk) {
+  if (isDrunk && drunk) {
     return {
       primary: { ...drunk, similarity: best.similarity, exact: best.exact },
       secondary: best,
@@ -103,7 +111,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
   }
 
   // 傻乐者兜底
-  if (best.similarity < 60 && hhhh) {
+  if (best.similarity < fallbackThreshold && hhhh) {
     return {
       primary: { ...hhhh, similarity: best.similarity, exact: best.exact },
       secondary: best,

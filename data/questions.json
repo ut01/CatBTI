@@ -595,7 +595,7 @@
           "value": 4
         }
       ],
-      "behavior": "Always shown at random position. If value 3 (饮酒) selected, drink_gate_q2 is inserted after."
+      "behavior": "随机插入问卷任意位置。若选「饮酒」（值为 3），其后会插入饮酒追问第二题。"
     },
     {
       "id": "drink_gate_q2",
@@ -612,7 +612,7 @@
           "value": 2
         }
       ],
-      "behavior": "Only shown if drink_gate_q1 == 3. If value 2 selected, DRUNK hidden personality is activated."
+      "behavior": "仅当第一题爱好选了「饮酒」时出现。若本题选第二项（保温杯灌白酒），激活「酒鬼」隐藏人格。"
     }
   ]
 }
