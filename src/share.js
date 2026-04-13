@@ -70,10 +70,10 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
 
   // 猫咪头像
   if (avatarImg) {
-    const avatarSize = 180
+    const avatarSize = 234
     const avatarX = (W - avatarSize) / 2
     ctx.save()
-    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 36)
+    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 46)
     ctx.clip()
     ctx.drawImage(avatarImg, avatarX, y, avatarSize, avatarSize)
     ctx.restore()
@@ -82,7 +82,7 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
     ctx.shadowColor = 'rgba(196, 92, 38, 0.12)'
     ctx.shadowBlur = 24
     ctx.shadowOffsetY = 10
-    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 36)
+    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 46)
     ctx.strokeStyle = 'rgba(196, 92, 38, 0.08)'
     ctx.lineWidth = 1
     ctx.stroke()

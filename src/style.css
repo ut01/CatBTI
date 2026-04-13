@@ -241,10 +241,10 @@ a.btn {
 }
 
 .result-avatar {
-  width: min(220px, 62vw);
+  width: min(286px, 80vw);
   height: auto;
   display: block;
-  border-radius: 28px;
+  border-radius: 36px;
   box-shadow: 0 18px 40px rgba(196, 92, 38, 0.12);
 }
 
