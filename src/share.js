@@ -35,7 +35,7 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   ctx.textAlign = 'center'
   ctx.font = '400 22px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
   ctx.fillStyle = '#6b7b6e'
-  const kickerText = mode === 'drunk' ? '隐藏人格已激活' : mode === 'fallback' ? '系统强制兜底' : '你的主类型'
+  const kickerText = mode === 'drunk' ? '敬局彩蛋已触发' : mode === 'fallback' ? '模型对不上账 · 已兜底' : '你的主类型'
   ctx.fillText(kickerText, W / 2, y)
   y += 56
 

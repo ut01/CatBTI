@@ -15,7 +15,7 @@ Remixed by [Koutian Wu](https://ktwu01.github.io/)
 - **27 种人格类型** — 25 种标准类型 + 2 种隐藏/兜底类型
 - **15 个评估维度** — 自我、情感、态度、行动、社交五大模型
 - **曼哈顿距离匹配** — 基于 15 维向量的匹配与相似度
-- **隐藏彩蛋** — 酒鬼人格触发机制
+- **隐藏彩蛋** — 「敬局型创始人」饭局门控触发机制
 - **移动端优先** — 响应式布局
 - **易于定制** — 数据在 `data/*.json`，改 JSON 即可
 
@@ -118,7 +118,7 @@ npm run build:subdir
 ```
 
 - `maxDistance`：相似度公式分母（默认 15 维 × 每维最大差 2 = 30）
-- `fallbackThreshold`：最佳匹配相似度低于该百分数时落入 HHHH 傻乐者兜底
+- `fallbackThreshold`：最佳匹配相似度低于该百分数时落入 HHHH「对不上账型」兜底
 
 ### 部署路径（GitHub Pages）
 
@@ -144,7 +144,7 @@ npm run build:subdir
 3. **向量化**：L=1, M=2, H=3，生成 15 维数值向量
 4. **匹配**：计算用户向量与每种类型的曼哈顿距离
 5. **排名**：距离升序 → 精准命中降序 → 相似度降序
-6. **特殊覆盖**：酒鬼彩蛋 > 正常匹配 > 傻乐者兜底（相似度低于 `config.scoring.fallbackThreshold`，默认 60）
+6. **特殊覆盖**：敬局彩蛋 > 正常匹配 > 对不上账兜底（相似度低于 `config.scoring.fallbackThreshold`，默认 60）
 
 详见 [数据分析报告](docs/analysis.md)。
 

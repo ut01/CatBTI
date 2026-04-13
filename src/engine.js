@@ -100,7 +100,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
   const drunk = specialTypes.find((t) => t.code === 'DRUNK')
   const hhhh = specialTypes.find((t) => t.code === 'HHHH')
 
-  // 酒鬼覆盖
+  // 敬局型（DRUNK）覆盖
   if (isDrunk && drunk) {
     return {
       primary: { ...drunk, similarity: best.similarity, exact: best.exact },
@@ -110,7 +110,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
     }
   }
 
-  // 傻乐者兜底
+  // 对不上账型（HHHH）兜底
   if (best.similarity < fallbackThreshold && hhhh) {
     return {
       primary: { ...hhhh, similarity: best.similarity, exact: best.exact },
