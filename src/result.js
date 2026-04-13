@@ -1,4 +1,5 @@
 import { drawRadar } from './chart.js'
+import { getCatAvatar } from './cat-avatar.js'
 import { generateShareImage } from './share.js'
 
 const LEVEL_LABEL = { L: '低', M: '中', H: '高' }
@@ -22,6 +23,11 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
   const secondaryLabel = ui.secondaryLabel || '清醒版次佳原型'
 
   // 主类型
+  const avatarEl = document.getElementById('result-avatar')
+  if (avatarEl) {
+    avatarEl.src = getCatAvatar(primary)
+    avatarEl.alt = `${primary.cn || primary.code} 插画`
+  }
   document.getElementById('result-code').textContent = primary.code
   document.getElementById('result-name').textContent = primary.cn
 
