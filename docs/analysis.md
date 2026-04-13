@@ -105,31 +105,31 @@ CatBTI 测试建立在五个「猫宅版」模型之上（`dimensions.json` → 
 
 | # | 代码 | 中文名 | 模式串 | 维度和 |
 |---|------|--------|--------|--------|
-| 1 | CTRL | 猫德教官 | HHH-HMH-MHH-HHH-MHM | 41 |
-| 2 | ATM-er | 自动投喂机 | HHH-HHM-HHH-HMH-MHL | 40 |
-| 3 | Dior-s | 晒太阳专业户 | MHM-MMH-MHM-HMH-LHL | 34 |
-| 4 | BOSS | 一家之主 | HHH-HMH-MMH-HHH-LHL | 38 |
-| 5 | THAN-K | 感恩蹭腿猫 | MHM-HMM-HHM-MMH-MHL | 35 |
-| 6 | OH-NO | 应激小剧场 | HHL-LMH-LHH-HHM-LHL | 33 |
-| 7 | GOGO | 冲冲冲 | HHM-HMH-MMH-HHH-MHM | 39 |
-| 8 | SEXY | 镜头宠儿 | HMH-HHL-HMM-HMM-HLH | 36 |
-| 9 | LOVE-R | 见一个爱一个 | MLH-LHL-HLH-MLM-MLH | 29 |
-| 10 | MUM | 猫妈妈 | MMH-MHL-HMM-LMM-HLL | 30 |
-| 11 | FAKE | 双面夹心 | HLM-MML-MLM-MLM-HLH | 28 |
-| 12 | OG8K | 都行猫 | MMH-MMM-HML-LMM-MML | 29 |
-| 13 | MALO | 上树猴系猫 | MLH-MHM-MLH-MLH-LMH | 31 |
-| 14 | JOKE-R | 整活喜剧猫 | LLH-LHL-LML-LLL-MLM | 22 |
-| 15 | WOC! | 嘴上喵喵 | HHL-HMH-MMH-HHM-LHH | 37 |
-| 16 | THIN-K | 深读条款猫 | HHL-HMH-MLH-MHM-LHH | 35 |
-| 17 | SHIT | 骂骂咧咧交付猫 | HHL-HLH-LMM-HHM-LHH | 34 |
-| 18 | ZZZZ | 装睡直到开罐 | MHL-MLH-LML-MML-LHM | 27 |
-| 19 | POOR | 清贫专注猎手 | HHL-MLH-LMH-HHH-LHL | 33 |
-| 20 | MONK | 社交绝缘体 | HHL-LLH-LLM-MML-LHM | 27 |
-| 21 | IMSB | 不配被领养星猫 | LLM-LMM-LLL-LLL-MLM | 20 |
-| 22 | SOLO | 空房守夜猫 | LML-LLH-LHL-LML-LHM | 24 |
-| 23 | FU?K | 野草暴脾气 | MLL-LHL-LLM-MLL-HLH | 24 |
-| 24 | DEAD | 省电卸载猫 | LLL-LLM-LML-LLL-LHM | 20 |
-| 25 | IMFW | 脆皮敏感猫 | LLH-LHL-LML-LLL-MLL | 21 |
+| 1 | LIHUA | 狸花猫 | HHH-HMH-MHH-HHH-MHM | 41 |
+| 2 | RAGDOLL | 布偶猫 | HHH-HHM-HHH-HMH-MHL | 40 |
+| 3 | EXOTIC | 异国短毛猫 | MHM-MMH-MHM-HMH-LHL | 34 |
+| 4 | MAINE | 缅因猫 | HHH-HMH-MMH-HHH-LHL | 38 |
+| 5 | BRITISH | 英国短毛猫 | MHM-HMM-HHM-MMH-MHL | 35 |
+| 6 | SIAMESE | 暹罗猫 | HHL-LMH-LHH-HHM-LHL | 33 |
+| 7 | ABY | 阿比西尼亚猫 | HHM-HMH-MMH-HHH-MHM | 39 |
+| 8 | BENGAL | 孟加拉豹猫 | HMH-HHL-HMM-HMM-HLH | 36 |
+| 9 | NORWEGIAN | 挪威森林猫 | MLH-LHL-HLH-MLM-MLH | 29 |
+| 10 | VAN | 土耳其梵猫 | MMH-MHL-HMM-LMM-HLL | 30 |
+| 11 | SPHYNX | 斯芬克斯猫 | HLM-MML-MLM-MLM-HLH | 28 |
+| 12 | BIRMAN | 伯曼猫 | MMH-MMM-HML-LMM-MML | 29 |
+| 13 | ORIENTAL | 东方短毛猫 | MLH-MHM-MLH-MLH-LMH | 31 |
+| 14 | CORNISH | 柯尼斯卷毛猫 | LLH-LHL-LML-LLL-MLM | 22 |
+| 15 | AMERICAN | 美国短毛猫 | HHL-HMH-MMH-HHM-LHH | 37 |
+| 16 | RUSSIAN | 俄罗斯蓝猫 | HHL-HMH-MLH-MHM-LHH | 35 |
+| 17 | ORANGE | 中华田园橘猫 | HHL-HLH-LMM-HHM-LHH | 34 |
+| 18 | PERSIAN | 波斯猫 | MHL-MLH-LML-MML-LHM | 27 |
+| 19 | JIANZHOU | 四川简州猫 | HHL-MLH-LMH-HHH-LHL | 33 |
+| 20 | CHARTREUX | 沙特尔猫 | HHL-LLH-LLM-MML-LHM | 27 |
+| 21 | MUNCHKIN | 曼基康猫 | LLM-LMM-LLL-LLL-MLM | 20 |
+| 22 | EGYPTIAN | 埃及猫 | LML-LLH-LHL-LML-LHM | 24 |
+| 23 | SAVANNAH | 热带草原猫 | MLL-LHL-LLM-MLL-HLH | 24 |
+| 24 | BOMBAY | 孟买猫 | LLL-LLM-LML-LLL-LHM | 20 |
+| 25 | HIMALAYAN | 喜马拉雅猫 | LLH-LHL-LML-LLL-MLL | 21 |
 
 > **维度和** = 模式串中所有维度数值之和（L=1, M=2, H=3），范围 15~45。该值越高表示类型在各维度上整体偏 H（"高功能"端），越低则偏 L。
 
@@ -137,8 +137,8 @@ CatBTI 测试建立在五个「猫宅版」模型之上（`dimensions.json` → 
 
 | 代码 | 中文名 | 触发条件 |
 |------|--------|----------|
-| HHHH | 对不上猫粮型 | 最佳匹配相似度 < `fallbackThreshold`（默认 60）时强制兜底 |
-| DRUNK | 猫薄荷嗨猫 | 猫薄荷门控第二题选择「伪装养生其实是嗨」时激活 |
+| HHHH | 混血米克斯猫 | 最佳匹配相似度 < `fallbackThreshold`（默认 60）时强制兜底 |
+| DRUNK | 德文卷毛猫（派对模式） | 猫薄荷门控第二题选择「伪装养生其实是嗨」时激活 |
 
 ---
 
@@ -150,31 +150,31 @@ CatBTI 测试建立在五个「猫宅版」模型之上（`dimensions.json` → 
 
 | 类型 | S1 | S2 | S3 | E1 | E2 | E3 | A1 | A2 | A3 | Ac1 | Ac2 | Ac3 | So1 | So2 | So3 |
 |------|----|----|----|----|----|----|----|----|----|----|----|----|----|----|-----|
-| CTRL | H | H | H | H | M | H | M | H | H | H | H | H | M | H | M |
-| ATM-er | H | H | H | H | H | M | H | H | H | H | M | H | M | H | L |
-| Dior-s | M | H | M | M | M | H | M | H | M | H | M | H | L | H | L |
-| BOSS | H | H | H | H | M | H | M | M | H | H | H | H | L | H | L |
-| THAN-K | M | H | M | H | M | M | H | H | M | M | M | H | M | H | L |
-| OH-NO | H | H | L | L | M | H | L | H | H | H | H | M | L | H | L |
-| GOGO | H | H | M | H | M | H | M | M | H | H | H | H | M | H | M |
-| SEXY | H | M | H | H | H | L | H | M | M | H | M | M | H | L | H |
-| LOVE-R | M | L | H | L | H | L | H | L | H | M | L | M | M | L | H |
-| MUM | M | M | H | M | H | L | H | M | M | L | M | M | H | L | L |
-| FAKE | H | L | M | M | M | L | M | L | M | M | L | M | H | L | H |
-| OG8K | M | M | H | M | M | M | H | M | L | L | M | M | M | M | L |
-| MALO | M | L | H | M | H | M | M | L | H | M | L | H | L | M | H |
-| JOKE-R | L | L | H | L | H | L | L | M | L | L | L | L | M | L | M |
-| WOC! | H | H | L | H | M | H | M | M | H | H | H | M | L | H | H |
-| THIN-K | H | H | L | H | M | H | M | L | H | M | H | M | L | H | H |
-| SHIT | H | H | L | H | L | H | L | M | M | H | H | M | L | H | H |
-| ZZZZ | M | H | L | M | L | H | L | M | L | M | M | L | L | H | M |
-| POOR | H | H | L | M | L | H | L | M | H | H | H | H | L | H | L |
-| MONK | H | H | L | L | L | H | L | L | M | M | M | L | L | H | M |
-| IMSB | L | L | M | L | M | M | L | L | L | L | L | L | M | L | M |
-| SOLO | L | M | L | L | L | H | L | H | L | L | M | L | L | H | M |
-| FU?K | M | L | L | L | H | L | L | L | M | M | L | L | H | L | H |
-| DEAD | L | L | L | L | L | M | L | M | L | L | L | L | L | H | M |
-| IMFW | L | L | H | L | H | L | L | M | L | L | L | L | M | L | L |
+| LIHUA | H | H | H | H | M | H | M | H | H | H | H | H | M | H | M |
+| RAGDOLL | H | H | H | H | H | M | H | H | H | H | M | H | M | H | L |
+| EXOTIC | M | H | M | M | M | H | M | H | M | H | M | H | L | H | L |
+| MAINE | H | H | H | H | M | H | M | M | H | H | H | H | L | H | L |
+| BRITISH | M | H | M | H | M | M | H | H | M | M | M | H | M | H | L |
+| SIAMESE | H | H | L | L | M | H | L | H | H | H | H | M | L | H | L |
+| ABY | H | H | M | H | M | H | M | M | H | H | H | H | M | H | M |
+| BENGAL | H | M | H | H | H | L | H | M | M | H | M | M | H | L | H |
+| NORWEGIAN | M | L | H | L | H | L | H | L | H | M | L | M | M | L | H |
+| VAN | M | M | H | M | H | L | H | M | M | L | M | M | H | L | L |
+| SPHYNX | H | L | M | M | M | L | M | L | M | M | L | M | H | L | H |
+| BIRMAN | M | M | H | M | M | M | H | M | L | L | M | M | M | M | L |
+| ORIENTAL | M | L | H | M | H | M | M | L | H | M | L | H | L | M | H |
+| CORNISH | L | L | H | L | H | L | L | M | L | L | L | L | M | L | M |
+| AMERICAN | H | H | L | H | M | H | M | M | H | H | H | M | L | H | H |
+| RUSSIAN | H | H | L | H | M | H | M | L | H | M | H | M | L | H | H |
+| ORANGE | H | H | L | H | L | H | L | M | M | H | H | M | L | H | H |
+| PERSIAN | M | H | L | M | L | H | L | M | L | M | M | L | L | H | M |
+| JIANZHOU | H | H | L | M | L | H | L | M | H | H | H | H | L | H | L |
+| CHARTREUX | H | H | L | L | L | H | L | L | M | M | M | L | L | H | M |
+| MUNCHKIN | L | L | M | L | M | M | L | L | L | L | L | L | M | L | M |
+| EGYPTIAN | L | M | L | L | L | H | L | H | L | L | M | L | L | H | M |
+| SAVANNAH | M | L | L | L | H | L | L | L | M | M | L | L | H | L | H |
+| BOMBAY | L | L | L | L | L | M | L | M | L | L | L | L | L | H | M |
+| HIMALAYAN | L | L | H | L | H | L | L | M | L | L | L | L | M | L | L |
 
 ### 2.2 各维度 L/M/H 分布统计
 
@@ -202,7 +202,7 @@ CatBTI 测试建立在五个「猫宅版」模型之上（`dimensions.json` → 
 
 **高度偏态维度**（某一级占比超过 50%）：
 
-- **So2 人际边界感**：H 占 14/25（56%），说明大多数类型被设计为"重视边界"。M 仅 3 个（Dior-s, MALO, OG8K），极为稀缺，意味着在 So2 上取到 M 的用户匹配范围极窄。
+- **So2 人际边界感**：H 占 14/25（56%），说明大多数类型被设计为"重视边界"。M 仅 3 个（EXOTIC, ORIENTAL, BIRMAN），极为稀缺，意味着在 So2 上取到 M 的用户匹配范围极窄。
 - **S2 自我清晰度**：H 占 13/25（52%），大部分类型自我清晰度高。
 - **E3 边界与依赖**：H 占 13/25（52%），与 So2 类似，类型设计偏好"独立"端。
 
@@ -262,44 +262,44 @@ $$d(A,B) = \sum_{i=1}^{15} |A_i - B_i|$$
 
 | 排名 | 类型对 | 距离 | 差异维度 | 分析 |
 |------|--------|------|----------|------|
-| **1** | JOKE-R vs IMFW | **1** | So3 (M vs L) | 仅一个维度差 1 级，几乎不可区分 |
-| **2** | CTRL vs GOGO | **2** | S3 (H vs M), A2 (H vs M) | 核心差异在价值感和规则感上各差一级 |
-| **3** | WOC! vs THIN-K | **2** | A2 (M vs L), Ac1 (H vs M) | 差异在规则灵活度和动机导向 |
-| **4** | CTRL vs BOSS | **3** | A2 (H vs M), So1 (M vs L), So3 (M vs L) | 差异全在社交和规则微调 |
-| **5** | BOSS vs GOGO | **3** | S3 (H vs M), So1 (L vs M), So3 (L vs M) | 核心价值和社交主动性微差 |
-| **6** | WOC! vs SHIT | **3** | E2 (M vs L), A1 (M vs L), A3 (H vs M) | 情感投入和世界观微调 |
+| **1** | CORNISH vs HIMALAYAN | **1** | So3 (M vs L) | 仅一个维度差 1 级，几乎不可区分 |
+| **2** | LIHUA vs ABY | **2** | S3 (H vs M), A2 (H vs M) | 核心差异在价值感和规则感上各差一级 |
+| **3** | AMERICAN vs RUSSIAN | **2** | A2 (M vs L), Ac1 (H vs M) | 差异在规则灵活度和动机导向 |
+| **4** | LIHUA vs MAINE | **3** | A2 (H vs M), So1 (M vs L), So3 (M vs L) | 差异全在社交和规则微调 |
+| **5** | MAINE vs ABY | **3** | S3 (H vs M), So1 (L vs M), So3 (L vs M) | 核心价值和社交主动性微差 |
+| **6** | AMERICAN vs ORANGE | **3** | E2 (M vs L), A1 (M vs L), A3 (H vs M) | 情感投入和世界观微调 |
 
 **关键发现**：
 
-- **JOKE-R（整活喜剧猫）和 IMFW（脆皮敏感猫）** 距离仅 1，在实际匹配中几乎无法区分。这意味着用户仅需在 So3（表达与真实度）上多得 1 分就会从「脆皮敏感猫」变成「整活喜剧猫」，体验上可能产生混淆。建议考虑合并或增加区分维度。
-- **CTRL-GOGO-BOSS** 三者形成一个"高功能三角"（两两距离 2~3），代表了"高自信 + 高执行 + 高驱动"的不同微变体。
-- **WOC!-THIN-K-SHIT** 形成另一个"高认知独立三角"（两两距离 2~5），共同特征是 S1=H, S2=H, S3=L, E3=H, So2=H, So3=H。
+- **CORNISH（柯尼斯卷毛猫）和 HIMALAYAN（喜马拉雅猫）** 距离仅 1，在实际匹配中几乎无法区分。这意味着用户仅需在 So3（表达与真实度）上多得 1 分就会从「喜马拉雅猫」变成「柯尼斯卷毛猫」，体验上可能产生混淆。建议考虑合并或增加区分维度。
+- **LIHUA-ABY-MAINE** 三者形成一个"高功能三角"（两两距离 2~3），代表了"高自信 + 高执行 + 高驱动"的不同微变体。
+- **AMERICAN-RUSSIAN-ORANGE** 形成另一个"高认知独立三角"（两两距离 2~5），共同特征是 S1=H, S2=H, S3=L, E3=H, So2=H, So3=H。
 
 ### 3.4 最远类型对（距离 >= 22）
 
 | 排名 | 类型对 | 距离 | 分析 |
 |------|--------|------|------|
-| **1** | WOC! vs IMFW | **24** | 高认知独立 vs 低功能依赖，几乎全维度对立 |
-| **2** | BOSS vs FU?K | **24** | 一家之主 vs 野草暴脾气，价值观完全相反 |
-| **3** | THIN-K vs IMFW | **24** | 深读条款猫 vs 脆皮敏感猫，功能水平两极 |
-| **4** | POOR vs JOKE-R | **23** | 清贫专注猎手 vs 整活喜剧猫，驱动系统对立 |
-| **5** | WOC! vs JOKE-R | **23** | 嘴上喵喵 vs 整活喜剧猫 |
-| **6** | CTRL vs FU?K | **23** | 猫德教官 vs 野草暴脾气，控制 vs 放纵 |
-| **7** | SHIT vs IMFW | **23** | 骂骂咧咧交付猫 vs 脆皮敏感猫 |
-| **8** | ATM-er vs DEAD | **22** | 自动投喂机 vs 省电卸载猫，全面付出 vs 全面抽离 |
-| **9** | ATM-er vs IMSB | **22** | 自动投喂机 vs 不配被领养星猫 |
-| **10** | ATM-er vs FU?K | **22** | 自动投喂机 vs 野草暴脾气 |
-| **11** | BOSS vs IMSB | **22** | 一家之主 vs 不配被领养星猫 |
-| **12** | BOSS vs JOKE-R | **22** | 一家之主 vs 整活喜剧猫 |
-| **13** | CTRL vs IMFW | **22** | 猫德教官 vs 脆皮敏感猫 |
-| **14** | SEXY vs DEAD | **22** | 镜头宠儿 vs 省电卸载猫 |
-| **15** | POOR vs IMFW | **22** | 清贫专注猎手 vs 脆皮敏感猫 |
+| **1** | AMERICAN vs HIMALAYAN | **24** | 高认知独立 vs 低功能依赖，几乎全维度对立 |
+| **2** | MAINE vs SAVANNAH | **24** | 缅因猫 vs 热带草原猫，价值观完全相反 |
+| **3** | RUSSIAN vs HIMALAYAN | **24** | 俄罗斯蓝猫 vs 喜马拉雅猫，功能水平两极 |
+| **4** | JIANZHOU vs CORNISH | **23** | 四川简州猫 vs 柯尼斯卷毛猫，驱动系统对立 |
+| **5** | AMERICAN vs CORNISH | **23** | 美国短毛猫 vs 柯尼斯卷毛猫 |
+| **6** | LIHUA vs SAVANNAH | **23** | 狸花猫 vs 热带草原猫，控制 vs 放纵 |
+| **7** | ORANGE vs HIMALAYAN | **23** | 中华田园橘猫 vs 喜马拉雅猫 |
+| **8** | RAGDOLL vs BOMBAY | **22** | 布偶猫 vs 孟买猫，全面付出 vs 全面抽离 |
+| **9** | RAGDOLL vs MUNCHKIN | **22** | 布偶猫 vs 曼基康猫 |
+| **10** | RAGDOLL vs SAVANNAH | **22** | 布偶猫 vs 热带草原猫 |
+| **11** | MAINE vs MUNCHKIN | **22** | 缅因猫 vs 曼基康猫 |
+| **12** | MAINE vs CORNISH | **22** | 缅因猫 vs 柯尼斯卷毛猫 |
+| **13** | LIHUA vs HIMALAYAN | **22** | 狸花猫 vs 喜马拉雅猫 |
+| **14** | BENGAL vs BOMBAY | **22** | 孟加拉豹猫 vs 孟买猫 |
+| **15** | JIANZHOU vs HIMALAYAN | **22** | 四川简州猫 vs 喜马拉雅猫 |
 
 **关键发现**：
 
 - 最远距离 24（理论最大 30 的 80%），出现在"高功能+高独立"类型与"低功能+高依赖"类型之间。
-- **IMFW（脆皮敏感猫）** 和 **JOKE-R（整活喜剧猫）** 频繁出现在最远对中 -- 它们是空间中的"边缘类型"。
-- **FU?K（野草暴脾气）** 也频繁出现在远距离对中，因为它的模式与主流"高功能"类型形成强烈对比。
+- **HIMALAYAN（喜马拉雅猫）** 和 **CORNISH（柯尼斯卷毛猫）** 频繁出现在最远对中 -- 它们是空间中的"边缘类型"。
+- **SAVANNAH（热带草原猫）** 也频繁出现在远距离对中，因为它的模式与主流"高功能"类型形成强烈对比。
 
 ### 3.5 类型中心性分析
 
@@ -311,39 +311,39 @@ $$d(A,B) = \sum_{i=1}^{15} |A_i - B_i|$$
 
 | 类别 | 类型 | 维度和 | 中心性 |
 |------|------|--------|--------|
-| 极端低端 | DEAD | 20 | 极端边缘 |
-| 极端低端 | IMSB | 20 | 极端边缘 |
-| 低端 | IMFW | 21 | 边缘 |
-| 低端 | JOKE-R | 22 | 边缘 |
-| 低端 | SOLO | 24 | 偏边缘 |
-| 低端 | FU?K | 24 | 偏边缘 |
-| 中低 | ZZZZ | 27 | 偏中心 |
-| 中低 | MONK | 27 | 偏中心 |
-| **中心** | **FAKE** | **28** | **中心** |
-| **中心** | **LOVE-R** | **29** | **中心** |
-| **中心** | **OG8K** | **29** | **中心** |
-| **中心** | **MUM** | **30** | **中心** |
-| **中心** | **MALO** | **31** | **中心** |
-| 中高 | OH-NO | 33 | 偏中心 |
-| 中高 | POOR | 33 | 偏中心 |
-| 中高 | Dior-s | 34 | 偏中心 |
-| 中高 | SHIT | 34 | 偏中心 |
-| 中高 | THAN-K | 35 | 偏中心 |
-| 中高 | THIN-K | 35 | 偏中心 |
-| 高端 | SEXY | 36 | 偏边缘 |
-| 高端 | WOC! | 37 | 偏边缘 |
-| 高端 | BOSS | 38 | 边缘 |
-| 高端 | GOGO | 39 | 边缘 |
-| 极端高端 | ATM-er | 40 | 极端边缘 |
-| 极端高端 | CTRL | 41 | 极端边缘 |
+| 极端低端 | BOMBAY | 20 | 极端边缘 |
+| 极端低端 | MUNCHKIN | 20 | 极端边缘 |
+| 低端 | HIMALAYAN | 21 | 边缘 |
+| 低端 | CORNISH | 22 | 边缘 |
+| 低端 | EGYPTIAN | 24 | 偏边缘 |
+| 低端 | SAVANNAH | 24 | 偏边缘 |
+| 中低 | PERSIAN | 27 | 偏中心 |
+| 中低 | CHARTREUX | 27 | 偏中心 |
+| **中心** | **SPHYNX** | **28** | **中心** |
+| **中心** | **NORWEGIAN** | **29** | **中心** |
+| **中心** | **BIRMAN** | **29** | **中心** |
+| **中心** | **VAN** | **30** | **中心** |
+| **中心** | **ORIENTAL** | **31** | **中心** |
+| 中高 | SIAMESE | 33 | 偏中心 |
+| 中高 | JIANZHOU | 33 | 偏中心 |
+| 中高 | EXOTIC | 34 | 偏中心 |
+| 中高 | ORANGE | 34 | 偏中心 |
+| 中高 | BRITISH | 35 | 偏中心 |
+| 中高 | RUSSIAN | 35 | 偏中心 |
+| 高端 | BENGAL | 36 | 偏边缘 |
+| 高端 | AMERICAN | 37 | 偏边缘 |
+| 高端 | MAINE | 38 | 边缘 |
+| 高端 | ABY | 39 | 边缘 |
+| 极端高端 | RAGDOLL | 40 | 极端边缘 |
+| 极端高端 | LIHUA | 41 | 极端边缘 |
 
 **最中心类型**（最容易被匹配到）：
-- **OG8K（都行猫）**、**MUM（猫妈妈）**、**FAKE（双面夹心）** -- 维度和在 28~30 之间，处于空间正中
+- **BIRMAN（伯曼猫）**、**VAN（土耳其梵猫）**、**SPHYNX（斯芬克斯猫）** -- 维度和在 28~30 之间，处于空间正中
 - 这些类型的模式串"不极端"，各维度混合了 L/M/H，因此与大量用户向量的距离较小
 
 **最极端类型**（最难被匹配到）：
-- **CTRL（猫德教官）** 维度和 41：15 维中 10 个为 H -- 需要用户在绝大多数维度都得高分
-- **DEAD（省电卸载猫）** 维度和 20：15 维中 11 个为 L -- 需要用户在绝大多数维度都得低分
+- **LIHUA（狸花猫）** 维度和 41：15 维中 10 个为 H -- 需要用户在绝大多数维度都得高分
+- **BOMBAY（孟买猫）** 维度和 20：15 维中 11 个为 L -- 需要用户在绝大多数维度都得低分
 - 这两个类型位于空间的两个极端，代表"全面高功能"和"全面抽离"
 
 ### 3.6 类型聚类结构
@@ -351,25 +351,25 @@ $$d(A,B) = \sum_{i=1}^{15} |A_i - B_i|$$
 基于距离分析，可识别出以下自然聚类：
 
 **聚类 A - "高功能领导群"**（互距 2~6）：
-- CTRL（猫德教官）、GOGO（冲冲冲）、BOSS（一家之主）、ATM-er（自动投喂机）
+- LIHUA（狸花猫）、ABY（阿比西尼亚猫）、MAINE（缅因猫）、RAGDOLL（布偶猫）
 - 共同特征：S1=H, S2=H, E1=H, Ac1=H, So2=H
 
 **聚类 B - "高认知独立群"**（互距 2~5）：
-- WOC!（嘴上喵喵）、THIN-K（深读条款猫）、SHIT（骂骂咧咧交付猫）
+- AMERICAN（美国短毛猫）、RUSSIAN（俄罗斯蓝猫）、ORANGE（中华田园橘猫）
 - 共同特征：S1=H, S2=H, S3=L, E3=H, So2=H, So3=H
 
 **聚类 C - "低功能脆弱群"**（互距 1~6）：
-- JOKE-R（整活喜剧猫）、IMFW（脆皮敏感猫）、IMSB（不配被领养星猫）、DEAD（省电卸载猫）
+- CORNISH（柯尼斯卷毛猫）、HIMALAYAN（喜马拉雅猫）、MUNCHKIN（曼基康猫）、BOMBAY（孟买猫）
 - 共同特征：多数维度为 L，So2 偏向 L（渴望亲近）
 
 **聚类 D - "中间温和群"**（互距 5~9）：
-- OG8K（都行猫）、MUM（猫妈妈）、THAN-K（感恩蹭腿猫）
+- BIRMAN（伯曼猫）、VAN（土耳其梵猫）、BRITISH（英国短毛猫）
 - 共同特征：多数维度为 M，没有极端取值
 
 **孤立类型**（与最近邻距离较大）：
-- SEXY（镜头宠儿）：独特的 E2=H + E3=L + So1=H 组合
-- FU?K（野草暴脾气）：独特的 E2=H + 几乎全 L 的其他维度
-- SOLO（空房守夜猫）：独特的 A2=H + E3=H 但其余全低
+- BENGAL（孟加拉豹猫）：独特的 E2=H + E3=L + So1=H 组合
+- SAVANNAH（热带草原猫）：独特的 E2=H + 几乎全 L 的其他维度
+- EGYPTIAN（埃及猫）：独特的 A2=H + E3=H 但其余全低
 
 ---
 
@@ -431,7 +431,7 @@ $$d(A,B) = \sum_{i=1}^{15} |A_i - B_i|$$
 
 距离超过上述阈值意味着用户的 15 维向量与所有 25 个类型都相差甚远。考虑到：
 - 25 个类型在 15 维空间中已有一定覆盖度
-- 最中心的类型（如 OG8K、MUM）到空间中心的距离较小
+- 最中心的类型（如 BIRMAN、VAN）到空间中心的距离较小
 - 用户答题产生的向量有 3^15 = 14,348,907 种理论组合
 
 实际上，由于类型设计覆盖了高/中/低各区域，触发 HHHH 的概率较低，但并非不可能。最可能触发的用户画像是：答题模式极端不一致（某些维度极高、某些极低，且组合方式与任何已定义类型都不匹配）。
@@ -524,7 +524,7 @@ user_vector = [S1_num, S2_num, S3_num, E1_num, E2_num, E3_num,
 对每个标准类型，解析其模式串并计算距离：
 
 ```
-type_pattern = "HHH-HMH-MHH-HHH-MHM"  // 以 CTRL 为例
+type_pattern = "HHH-HMH-MHH-HHH-MHM"  // 以 LIHUA 为例
 type_vector  = [3,3,3,3,2,3,2,3,3,3,3,3,2,3,2]  // 去掉横杠，逐字符转换
 
 distance = sum(|user_vector[i] - type_vector[i]|) for i = 0..14
@@ -625,20 +625,20 @@ else:
 
 | 类型 | 类型向量 | 距离计算 | 距离 | 精确命中 | 相似度 |
 |------|----------|----------|------|----------|--------|
-| CTRL | 3,3,3,3,2,3,2,3,3,3,3,3,2,3,2 | 0+0+1+0+0+0+0+1+0+0+0+0+0+0+0 | **2** | **13/15** | **93%** |
-| GOGO | 3,3,2,3,2,3,2,2,3,3,3,3,2,3,2 | 0+0+0+0+0+0+0+0+0+0+0+0+0+0+0 | **0** | **15/15** | **100%** |
-| BOSS | 3,3,3,3,2,3,2,2,3,3,3,3,1,3,1 | 0+0+1+0+0+0+0+0+0+0+0+0+1+0+1 | **3** | **12/15** | **90%** |
+| LIHUA | 3,3,3,3,2,3,2,3,3,3,3,3,2,3,2 | 0+0+1+0+0+0+0+1+0+0+0+0+0+0+0 | **2** | **13/15** | **93%** |
+| ABY | 3,3,2,3,2,3,2,2,3,3,3,3,2,3,2 | 0+0+0+0+0+0+0+0+0+0+0+0+0+0+0 | **0** | **15/15** | **100%** |
+| MAINE | 3,3,3,3,2,3,2,2,3,3,3,3,1,3,1 | 0+0+1+0+0+0+0+0+0+0+0+0+1+0+1 | **3** | **12/15** | **90%** |
 
-**结果**：用户向量恰好等于 GOGO 的模式串！距离=0，精确命中=15/15，相似度=100%。
+**结果**：用户向量恰好等于 ABY 的模式串！距离=0，精确命中=15/15，相似度=100%。
 
-最终匹配：**GOGO（冲冲冲）**
+最终匹配：**ABY（阿比西尼亚猫）**
 
 显示："匹配度 100% | 精准命中 15/15 维"
 
 **步骤 6：特殊规则检查**
 - 假设用户未选「聚众嗨局」（v=3）-> 不触发 DRUNK
 - 最佳相似度100% ≥ `fallbackThreshold` → 不触发 HHHH
-- 最终结果确认为 GOGO
+- 最终结果确认为 ABY
 
 ---
 
@@ -651,7 +651,7 @@ else:
 新类型需要一个 15 维的 L/M/H 模式串，格式为 `XXX-XXX-XXX-XXX-XXX`（每段 3 个字符，顺序须与 `dimensions.json` → `order` 一致）。
 
 设计要点：
-- 检查与现有 25 个类型的曼哈顿距离，建议**最小距离 ≥ 3**（避免出现像 JOKE-R vs IMFW 距离=1 的问题）
+- 检查与现有 25 个类型的曼哈顿距离，建议**最小距离 ≥ 3**（避免出现像 CORNISH vs HIMALAYAN 距离=1 的问题）
 - 模式串的维度和（L=1,M=2,H=3 之和）应考虑空间覆盖：当前约 20~41，可在空缺区域填充
 - 若希望更易被匹配到，维度和可接近 29~30（空间中心）
 
@@ -822,46 +822,46 @@ H: score >= 5 (不变)
 
 | 类型 A | 类型 B | 距离 | 聚类关系 |
 |--------|--------|------|----------|
-| JOKE-R | IMFW | 1 | 低功能群内 |
-| CTRL | GOGO | 2 | 高功能领导群内 |
-| WOC! | THIN-K | 2 | 高认知独立群内 |
-| CTRL | BOSS | 3 | 高功能领导群内 |
-| BOSS | GOGO | 3 | 高功能领导群内 |
-| WOC! | SHIT | 3 | 高认知独立群内 |
-| DEAD | SOLO | 4 | 低功能群边缘 |
-| IMSB | JOKE-R | 4 | 低功能群内 |
-| MONK | ZZZZ | 4 | 消极隐退群 |
-| OH-NO | POOR | 4 | 高规则低社交群 |
-| WOC! | GOGO | 4 | 跨聚类 |
-| ATM-er | CTRL | 5 | 高功能领导群内 |
-| Dior-s | THAN-K | 5 | 中间温和群边缘 |
-| IMSB | IMFW | 5 | 低功能群内 |
-| MUM | OG8K | 5 | 中间温和群内 |
-| POOR | SHIT | 5 | 高认知群边缘 |
-| THIN-K | SHIT | 5 | 高认知独立群内 |
-| SOLO | ZZZZ | 5 | 消极隐退群 |
+| CORNISH | HIMALAYAN | 1 | 低功能群内 |
+| LIHUA | ABY | 2 | 高功能领导群内 |
+| AMERICAN | RUSSIAN | 2 | 高认知独立群内 |
+| LIHUA | MAINE | 3 | 高功能领导群内 |
+| MAINE | ABY | 3 | 高功能领导群内 |
+| AMERICAN | ORANGE | 3 | 高认知独立群内 |
+| BOMBAY | EGYPTIAN | 4 | 低功能群边缘 |
+| MUNCHKIN | CORNISH | 4 | 低功能群内 |
+| CHARTREUX | PERSIAN | 4 | 消极隐退群 |
+| SIAMESE | JIANZHOU | 4 | 高规则低社交群 |
+| AMERICAN | ABY | 4 | 跨聚类 |
+| RAGDOLL | LIHUA | 5 | 高功能领导群内 |
+| EXOTIC | BRITISH | 5 | 中间温和群边缘 |
+| MUNCHKIN | HIMALAYAN | 5 | 低功能群内 |
+| VAN | BIRMAN | 5 | 中间温和群内 |
+| JIANZHOU | ORANGE | 5 | 高认知群边缘 |
+| RUSSIAN | ORANGE | 5 | 高认知独立群内 |
+| EGYPTIAN | PERSIAN | 5 | 消极隐退群 |
 
 ## 附录 C：距离 >= 22 的最远对完整列表
 
 | 类型 A | 类型 B | 距离 |
 |--------|--------|------|
-| WOC! | IMFW | 24 |
-| BOSS | FU?K | 24 |
-| THIN-K | IMFW | 24 |
-| POOR | JOKE-R | 23 |
-| WOC! | JOKE-R | 23 |
-| CTRL | FU?K | 23 |
-| SHIT | IMFW | 23 |
-| ATM-er | DEAD | 22 |
-| ATM-er | IMSB | 22 |
-| ATM-er | FU?K | 22 |
-| BOSS | IMSB | 22 |
-| BOSS | JOKE-R | 22 |
-| CTRL | IMFW | 22 |
-| CTRL | IMSB | 22 |
-| CTRL | DEAD | 21 |
-| SEXY | DEAD | 22 |
-| POOR | IMFW | 22 |
+| AMERICAN | HIMALAYAN | 24 |
+| MAINE | SAVANNAH | 24 |
+| RUSSIAN | HIMALAYAN | 24 |
+| JIANZHOU | CORNISH | 23 |
+| AMERICAN | CORNISH | 23 |
+| LIHUA | SAVANNAH | 23 |
+| ORANGE | HIMALAYAN | 23 |
+| RAGDOLL | BOMBAY | 22 |
+| RAGDOLL | MUNCHKIN | 22 |
+| RAGDOLL | SAVANNAH | 22 |
+| MAINE | MUNCHKIN | 22 |
+| MAINE | CORNISH | 22 |
+| LIHUA | HIMALAYAN | 22 |
+| LIHUA | MUNCHKIN | 22 |
+| LIHUA | BOMBAY | 21 |
+| BENGAL | BOMBAY | 22 |
+| JIANZHOU | HIMALAYAN | 22 |
 
 ---
 
