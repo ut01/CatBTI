@@ -455,6 +455,24 @@ a.btn {
   flex-wrap: wrap;
 }
 
+.result-credit {
+  margin-top: 14px;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.result-credit a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.result-credit a:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
 /* ========== Agent Section ========== */
 .agent-section {
   margin-top: 28px;
