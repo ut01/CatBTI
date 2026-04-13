@@ -39,7 +39,7 @@ export function scoresToLevels(scores, thresholds) {
 const LEVEL_NUM = { L: 1, M: 2, H: 3 }
 
 /**
- * 解析人格类型的 pattern 字符串
+ * 解析猫格类型的 pattern 字符串
  * "HHH-HMH-MHH-HHH-MHM" → ['H','H','H','H','M','H','M','H','H','H','H','H','M','H','M']
  */
 export function parsePattern(pattern) {

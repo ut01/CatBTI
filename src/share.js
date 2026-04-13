@@ -2,8 +2,23 @@
  * 生成分享图片 — 纯 Canvas 绘制，无外部依赖
  */
 
+import { getCatAvatar } from './cat-avatar.js'
+
 const LEVEL_NUM = { L: 1, M: 2, H: 3 }
 const LEVEL_LABEL = { L: '低', M: '中', H: '高' }
+
+/**
+ * 加载图片，返回 Promise<HTMLImageElement>
+ */
+function loadImage(src) {
+  return new Promise((resolve, reject) => {
+    const img = new Image()
+    img.crossOrigin = 'anonymous'
+    img.onload = () => resolve(img)
+    img.onerror = reject
+    img.src = src
+  })
+}
 
 /**
  * 生成分享卡片并下载
@@ -12,12 +27,20 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   const ui = config?.display?.ui || {}
   const dpr = 2
   const W = 720
-  const H = 1280
+  const H = 1800
   const canvas = document.createElement('canvas')
   canvas.width = W * dpr
   canvas.height = H * dpr
   const ctx = canvas.getContext('2d')
   ctx.scale(dpr, dpr)
+
+  // 预加载图片
+  const avatarSrc = getCatAvatar(primary)
+  const qrSrc = new URL('../img/qr_code_embeded_cat_img.png', import.meta.url).href
+  const [avatarImg, qrImg] = await Promise.all([
+    loadImage(avatarSrc).catch(() => null),
+    loadImage(qrSrc).catch(() => null),
+  ])
 
   // 背景
   ctx.fillStyle = '#faf6f0'
@@ -43,9 +66,32 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
         ? ui.resultKickerFallback || '十五维对不上猫粮 · CatBTI 兜底款'
         : ui.resultKickerNormal || '你的 CatBTI 主猫格'
   ctx.fillText(kickerText, W / 2, y)
-  y += 56
+  y += 32
+
+  // 猫咪头像
+  if (avatarImg) {
+    const avatarSize = 180
+    const avatarX = (W - avatarSize) / 2
+    ctx.save()
+    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 36)
+    ctx.clip()
+    ctx.drawImage(avatarImg, avatarX, y, avatarSize, avatarSize)
+    ctx.restore()
+    // 头像边框阴影
+    ctx.save()
+    ctx.shadowColor = 'rgba(196, 92, 38, 0.12)'
+    ctx.shadowBlur = 24
+    ctx.shadowOffsetY = 10
+    roundRect(ctx, avatarX, y, avatarSize, avatarSize, 36)
+    ctx.strokeStyle = 'rgba(196, 92, 38, 0.08)'
+    ctx.lineWidth = 1
+    ctx.stroke()
+    ctx.restore()
+    y += avatarSize + 20
+  }
 
   // 类型代码
+  ctx.textAlign = 'center'
   ctx.font = '900 72px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
   ctx.fillStyle = '#c45c26'
   ctx.fillText(primary.code, W / 2, y)
@@ -132,18 +178,67 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
     y += 26
   }
 
-  y += 16
+  y += 24
+
+  // 二维码区域
+  if (qrImg) {
+    const qrBlockW = 260
+    const qrBlockH = 300
+    const qrBlockX = (W - qrBlockW) / 2
+
+    // QR block 背景
+    const grad = ctx.createLinearGradient(qrBlockX, y, qrBlockX, y + qrBlockH)
+    grad.addColorStop(0, '#fffaf5')
+    grad.addColorStop(1, '#fde8d4')
+    roundRect(ctx, qrBlockX, y, qrBlockW, qrBlockH, 18)
+    ctx.fillStyle = grad
+    ctx.fill()
+    ctx.strokeStyle = '#ead9cc'
+    ctx.lineWidth = 1
+    ctx.stroke()
+
+    // QR 图片
+    const qrImgSize = 180
+    const qrImgX = (W - qrImgSize) / 2
+    const qrImgY = y + 20
+    ctx.save()
+    roundRect(ctx, qrImgX, qrImgY, qrImgSize, qrImgSize, 18)
+    ctx.clip()
+    ctx.fillStyle = '#ffffff'
+    ctx.fillRect(qrImgX, qrImgY, qrImgSize, qrImgSize)
+    ctx.drawImage(qrImg, qrImgX, qrImgY, qrImgSize, qrImgSize)
+    ctx.restore()
+
+    // QR 文字
+    ctx.textAlign = 'center'
+    ctx.font = '400 16px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
+    ctx.fillStyle = '#7a6560'
+    ctx.fillText('扫码测你的猫格', W / 2, qrImgY + qrImgSize + 28)
+    ctx.font = '400 14px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
+    ctx.fillStyle = '#b5a399'
+    ctx.fillText('分享给朋友一起测猫格', W / 2, qrImgY + qrImgSize + 50)
+
+    y += qrBlockH + 20
+  }
 
   // 底部水印
   ctx.textAlign = 'center'
   ctx.font = '400 18px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
   ctx.fillStyle = '#b5a399'
-  ctx.fillText(ui.shareWatermark || 'CatBTI 猫格测试 · 仅供娱乐', W / 2, H - cardY - 24)
+  ctx.fillText(ui.shareWatermark || 'CatBTI 猫格测试 · 仅供娱乐', W / 2, y + 10)
+
+  // 裁剪画布到实际内容高度
+  const finalH = y + 50
+  const finalCanvas = document.createElement('canvas')
+  finalCanvas.width = W * dpr
+  finalCanvas.height = finalH * dpr
+  const fctx = finalCanvas.getContext('2d')
+  fctx.drawImage(canvas, 0, 0)
 
   // 下载
   const link = document.createElement('a')
   link.download = `CatBTI-${primary.code}.png`
-  link.href = canvas.toDataURL('image/png')
+  link.href = finalCanvas.toDataURL('image/png')
   link.click()
 }
 

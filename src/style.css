@@ -32,6 +32,11 @@ body {
   min-height: 100dvh;
 }
 
+body.screenshot-mode {
+  background:
+    radial-gradient(circle at top, #fff7ef 0%, #faf6f0 45%, #f4ede4 100%);
+}
+
 /* ========== Layout ========== */
 #app {
   max-width: var(--max-width);
@@ -568,6 +573,24 @@ a.btn {
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.55;
+}
+
+body.screenshot-mode #dimensions-section-title,
+body.screenshot-mode #radar-chart,
+body.screenshot-mode #dimensions-detail,
+body.screenshot-mode .result-top3,
+body.screenshot-mode #disclaimer,
+body.screenshot-mode .agent-section {
+  display: none;
+}
+
+body.screenshot-mode #app {
+  max-width: 520px;
+  padding: 24px 16px 32px;
+}
+
+body.screenshot-mode .result-card {
+  padding-bottom: 24px;
 }
 
 /* ========== Mobile ========== */
