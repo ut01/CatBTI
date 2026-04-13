@@ -1,185 +1,80 @@
-# ChuangBTI · 创始人人格整活测试
+# CatBTI（猫BTI）· 测一测你是什么猫
 
-> **ChuangBTI**：面向创始人群体的整活向「创投圈脑回路」测评——**与 MBTI 完全无关**，语境锁定在融资、条款、联创、路演、对账与死线；创始人特供调侃版，仅供娱乐，与任何临床/职业鉴定无关。
+> **CatBTI（猫BTI）**：测一测你是什么猫。十五维「猫格」整活问卷，语境锁定在干饭、贴贴、跑酷、装睡、巡领地与人类腿边；**与 MBTI 完全无关**，仅供娱乐，与任何临床/动物行为鉴定无关。
 
-一个开源的娱乐性人格测试项目，基于 B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183) 的原创测试。
-
-Remixed by [Koutian Wu](https://ktwu01.github.io/)
+开源数据驱动的小测验：改 `data/*.json` 即可换题目与猫格，无需改引擎。
 
 ## 在线体验
 
-若已为仓库开启 GitHub Pages，可访问：**[https://ktwu01.github.io/ChuangBTI/](https://ktwu01.github.io/ChuangBTI/)**（与 `vite.config.js` 中 `base` 及部署目录一致即可）。
+若已为仓库开启 GitHub Pages，将构建产物 `dist/` 发布后访问你的 Pages 地址即可（与 `vite.config.js` 中 `base` 一致）。
 
 ## 特性
 
-- **27 种人格类型** — 25 种标准类型 + 2 种隐藏/兜底类型
-- **15 个评估维度** — 自我、情感、态度、行动、社交五大模型
+- **27 种猫格** — 25 种标准类型 + 2 种隐藏/兜底类型
+- **15 个评估维度** — 本喵自恋、贴贴独占、世界观、捕猎驱力、巡领地社交五大模型
 - **曼哈顿距离匹配** — 基于 15 维向量的匹配与相似度
-- **隐藏彩蛋** — 「敬局型创始人」饭局门控触发机制
+- **隐藏彩蛋** — 「猫薄荷嗨猫」门控触发机制（沿用原 drinkGate 字段名）
+- **分享图导出** — 结果页一键生成竖版分享图（Canvas）
 - **移动端优先** — 响应式布局
-- **易于定制** — 数据在 `data/*.json`，改 JSON 即可
 
 ## 项目结构
 
 ```
 ├── data/                    # 测试数据（修改这里来定制）
-│   ├── questions.json       # 题目和选项
-│   ├── dimensions.json      # 15个维度定义
-│   ├── types.json           # 人格类型和匹配模式
+│   ├── questions.json # 题目和选项
+│   ├── dimensions.json      # 15 个维度定义
+│   ├── types.json           # 猫格类型和匹配模式
 │   └── config.json          # 评分参数和显示配置
-├── src/                     # 源代码
+├── src/
 │   ├── engine.js            # 评分算法（纯函数）
 │   ├── quiz.js              # 答题流程控制
 │   ├── result.js            # 结果页渲染
+│   ├── share.js             # 分享图生成
 │   ├── chart.js             # 雷达图（Canvas API）
-│   ├── utils.js             # 工具函数
-│   ├── main.js              # 入口
-│   └── style.css            # 样式（CSS变量主题化）
+│   ├── utils.js
+│   ├── main.js
+│   └── style.css
 ├── docs/
-│   └── analysis.md          # 数据分析报告
+│   └── analysis.md          # 数据分析报告（与算法对齐）
 └── index.html
 ```
 
 ## 快速开始
 
-**请使用 Vite 开发服务器**（不要直接双击打开 `index.html`，否则模块与路径容易404）。
+请使用 Vite 开发服务器（不要直接双击打开 `index.html`）。
 
 ```bash
-git clone https://github.com/ktwu01/ChuangBTI.git
-cd ChuangBTI
+git clone https://github.com/ut01/CatBTI.git
+cd CatBTI
 
 npm install
 npm run dev
 ```
 
-浏览器打开终端里提示的本地地址（本项目默认可用 `http://localhost:5180/`；可用 `VITE_DEV_PORT=端口 npm run dev` 覆盖）。
+浏览器打开终端提示的本地地址（默认 `http://localhost:5180/`）。
 
 ```bash
-# 构建生产版本（输出 dist/，部署时只上传 dist 内文件）
 npm run build
-
-# 若站点必须挂在固定子路径（如仅支持 /ChuangBTI/ 绝对前缀）
+# 子路径部署示例：
 npm run build:subdir
 ```
 
-## 定制你自己的测试
+## 定制
 
-所有测试内容都在 `data/` 目录下，修改 JSON 文件即可定制，无需改动代码。
+- **题目**：编辑 `data/questions.json`（保持每维2 题、选项分值 1/2/3；门控题 ID 与触发值需与 `config.json` 的 `drinkGate` 一致）。
+- **猫格**：编辑 `data/types.json` 的 `pattern`（15 个 L/M/H，按 `dimensions.json` 的 `order`）。
+- **阈值**：`data/config.json` → `scoring`。
 
-### 修改题目
-
-编辑 `data/questions.json`，每道题的结构：
-
-```json
-{
-  "id": "q1",
-  "dim": "S1",
-  "text": "你的题目文字",
-  "options": [
-    { "label": "选项A", "value": 1 },
-    { "label": "选项B", "value": 2 },
-    { "label": "选项C", "value": 3 }
-  ]
-}
-```
-
-- `dim` 指定该题属于哪个维度
-- `value` 分值：1=低, 2=中, 3=高
-- 每个维度需要恰好 2 道题
-
-### 添加新人格类型
-
-编辑 `data/types.json`，在 `standard` 数组中添加：
-
-```json
-{
-  "code": "YOUR",
-  "pattern": "HHH-HMH-MHH-HHH-MHM",
-  "cn": "你的类型名",
-  "intro": "一句话简介",
-  "desc": "详细描述..."
-}
-```
-
-`pattern` 是 15 个字母的 L/M/H 组合（按维度顺序：S1-S3, E1-E3, A1-A3, Ac1-Ac3, So1-So3），用 `-` 分隔每个模型。
-
-### 调整评分参数
-
-编辑 `data/config.json`：
-
-```json
-{
-  "scoring": {
-    "levelThresholds": { "L": [2, 3], "M": [4, 4], "H": [5, 6] },
-    "maxDistance": 30,
-    "fallbackThreshold": 60
-  }
-}
-```
-
-- `maxDistance`：相似度公式分母（默认 15 维 × 每维最大差 2 = 30）
-- `fallbackThreshold`：ChuangBTI 主原型相似度低于该百分数时落入 HHHH「对不上账型」兜底
-
-### 部署路径（GitHub Pages）
-
-- 默认 `npm run build` 使用 **`base: './'`**，`dist/` 内为相对路径，适合挂在 `https://<user>.github.io/<repo>/`。
-- 若必须用绝对前缀 `/ChuangBTI/`，使用 `npm run build:subdir` 或设置环境变量：`VITE_BASE=/你的仓库名/ npm run build`。
-
-### 修改主题样式
-
-编辑 `src/style.css` 顶部的 CSS 变量：
-
-```css
-:root {
-  --bg: #f0f4f1;
-  --accent: #4c6752;
-  /* ... */
-}
-```
-
-## 评分算法
-
-1. **求和**：每维度 2 题分值相加（范围 2-6）
-2. **分级**：≤3 → L（低），4 → M（中），≥5 → H（高）
-3. **向量化**：L=1, M=2, H=3，生成 15 维数值向量
-4. **匹配**：计算用户向量与每种类型的曼哈顿距离
-5. **排名**：距离升序 → 精准命中降序 → 相似度降序
-6. **特殊覆盖**：敬局彩蛋 > 正常匹配 > 对不上账兜底（相似度低于 `config.scoring.fallbackThreshold`，默认 60）
-
-详见 [数据分析报告](docs/analysis.md)。
-
-## 部署
-
-### GitHub Pages
-
-将 **`npm run build` 生成的 `dist/` 目录内容** 作为站点根目录发布（不要只上传带 `src/` 的源码，否则浏览器找不到打包后的 JS/CSS）。
-
-### Vercel / Netlify
-
-连接本仓库，构建命令 `npm run build`，输出目录 `dist`。
-
-### 手动部署
-
-```bash
-npm run build
-# 将 dist/ 目录部署到任何静态服务器
-```
+详见 [docs/analysis.md](docs/analysis.md)。
 
 ## 技术栈
 
-- [Vite](https://vitejs.dev/) — 构建工具
-- 原生 JavaScript — 无框架依赖
-- Canvas API — 雷达图与分享图
-- CSS Custom Properties — 主题化
-
-## 致谢
-
-- 原创测试：B站UP主 [@蛆肉儿串儿](https://space.bilibili.com/417038183)（UID: 417038183）
-- 原版活动：[B站活动页（原 SBTI 企划）](https://www.bilibili.com/blackboard/era/VxiCX2CRqcqzPK9F.html)
+- [Vite](https://vitejs.dev/)
+- 原生 JavaScript + Canvas
 
 ## 声明
 
-本测试仅供娱乐，请勿用于任何严肃场景。本项目为开源二创，如有侵权请联系删除。
+本测试仅供娱乐。真养宠问题请咨询兽医或认证行为师。
 
 ## License
 

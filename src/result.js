@@ -13,11 +13,11 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
 
   // Kicker
   const kicker = document.getElementById('result-kicker')
-  if (mode === 'drunk') kicker.textContent = ui.resultKickerDrunk || '敬局彩蛋已触发'
-  else if (mode === 'fallback') kicker.textContent = ui.resultKickerFallback || '模型对不上账 · 已兜底'
-  else kicker.textContent = ui.resultKickerNormal || '你的 ChuangBTI 创始人原型'
+  if (mode === 'drunk') kicker.textContent = ui.resultKickerDrunk || '猫薄荷彩蛋已触发'
+  else if (mode === 'fallback') kicker.textContent = ui.resultKickerFallback || '十五维对不上猫粮 · 已兜底'
+  else kicker.textContent = ui.resultKickerNormal || '你的 CatBTI 主猫格'
 
-  const matchLabel = ui.matchLabel || 'ChuangBTI 脑回路重合度'
+  const matchLabel = ui.matchLabel || 'CatBTI 猫格重合度'
   const exactLabel = ui.exactLabel || '十五维精准对齐'
   const secondaryLabel = ui.secondaryLabel || '清醒版次佳原型'
 
@@ -121,7 +121,7 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
   const btnAgent = document.getElementById('btn-agent')
   btnAgent.onclick = () => {
     const cmd =
-      'git clone https://github.com/ktwu01/ChuangBTI.git && cd ChuangBTI && npm install && npm run dev'
+      'git clone https://github.com/ut01/CatBTI.git && cd CatBTI && npm install && npm run dev'
     navigator.clipboard.writeText(cmd).then(() => {
       btnAgent.textContent = '已复制!'
       setTimeout(() => { btnAgent.textContent = '复制一键部署命令' }, 2000)

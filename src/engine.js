@@ -1,5 +1,5 @@
 /**
- * ChuangBTI 评分引擎 — 纯函数，无 DOM 依赖
+ * CatBTI 评分引擎 — 纯函数，无 DOM 依赖
  */
 
 /**
@@ -100,7 +100,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
   const drunk = specialTypes.find((t) => t.code === 'DRUNK')
   const hhhh = specialTypes.find((t) => t.code === 'HHHH')
 
-  // 敬局型（DRUNK）覆盖
+  // 猫薄荷嗨猫（DRUNK）覆盖
   if (isDrunk && drunk) {
     return {
       primary: { ...drunk, similarity: best.similarity, exact: best.exact },
@@ -110,7 +110,7 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
     }
   }
 
-  // 对不上账型（HHHH）兜底
+  // 对不上猫粮型（HHHH）兜底
   if (best.similarity < fallbackThreshold && hhhh) {
     return {
       primary: { ...hhhh, similarity: best.similarity, exact: best.exact },

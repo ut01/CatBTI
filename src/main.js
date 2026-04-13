@@ -42,6 +42,13 @@ async function init() {
   const quiz = createQuiz(questions, config, onQuizComplete)
 
   const ui = config.display?.ui || {}
+  if (config.display?.title) {
+    document.title = config.display.title
+  }
+  if (config.display?.subtitle) {
+    const descEl = document.querySelector('meta[name="description"]')
+    if (descEl) descEl.setAttribute('content', config.display.subtitle)
+  }
   if (ui.introTitleHtml) {
     document.getElementById('intro-title').innerHTML = ui.introTitleHtml
   }

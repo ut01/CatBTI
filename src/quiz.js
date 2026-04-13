@@ -49,12 +49,12 @@ export function createQuiz(questions, config, onComplete) {
   function selectOption(question, option) {
     answers[question.id] = option.value
 
-    // 饭局门：如果选了应酬酒局（值同 config.drinkGate.triggerValue），插入追问
+    // 猫薄荷门：若选聚众嗨局（值同 config.drinkGate.triggerValue），插入追问
     if (question.id === config.drinkGate.questionId && option.value === config.drinkGate.triggerValue) {
       queue = insertAfter(queue, question.id, drinkGateQ2)
     }
 
-    // 敬局型（DRUNK）检测
+    // 猫薄荷嗨猫（DRUNK）检测
     if (question.id === 'drink_gate_q2' && option.value === config.drinkGate.drunkTriggerValue) {
       isDrunk = true
     }

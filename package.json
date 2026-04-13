@@ -1,11 +1,11 @@
 {
-  "name": "chuangbti",
+  "name": "catbti",
   "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "build:subdir": "VITE_BASE=/ChuangBTI/ vite build",
+    "build:subdir": "VITE_BASE=/CatBTI/ vite build",
     "preview": "vite preview"
   },
   "devDependencies": {

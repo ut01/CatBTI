@@ -20,7 +20,7 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   ctx.scale(dpr, dpr)
 
   // 背景
-  ctx.fillStyle = '#f0f4f1'
+  ctx.fillStyle = '#faf6f0'
   ctx.fillRect(0, 0, W, H)
 
   // 卡片白底
@@ -35,45 +35,45 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   // Kicker
   ctx.textAlign = 'center'
   ctx.font = '400 22px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-  ctx.fillStyle = '#6b7b6e'
+  ctx.fillStyle = '#7a6560'
   const kickerText =
     mode === 'drunk'
-      ? ui.resultKickerDrunk || '敬局彩蛋 · ChuangBTI 隐藏款'
+      ? ui.resultKickerDrunk || '猫薄荷彩蛋 · CatBTI 隐藏款'
       : mode === 'fallback'
-        ? ui.resultKickerFallback || '十五维对不上账 · ChuangBTI 兜底款'
-        : ui.resultKickerNormal || '你的 ChuangBTI 创始人原型'
+        ? ui.resultKickerFallback || '十五维对不上猫粮 · CatBTI 兜底款'
+        : ui.resultKickerNormal || '你的 CatBTI 主猫格'
   ctx.fillText(kickerText, W / 2, y)
   y += 56
 
   // 类型代码
   ctx.font = '900 72px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-  ctx.fillStyle = '#4c6752'
+  ctx.fillStyle = '#c45c26'
   ctx.fillText(primary.code, W / 2, y)
   y += 40
 
   // 中文名
   ctx.font = '600 32px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-  ctx.fillStyle = '#2c3e2d'
+  ctx.fillStyle = '#3d2f2f'
   ctx.fillText(primary.cn, W / 2, y)
   y += 36
 
   // 匹配度徽章
-  const matchLabel = ui.matchLabel || 'ChuangBTI 脑回路重合度'
+  const matchLabel = ui.matchLabel || 'CatBTI 猫格重合度'
   const exactLabel = ui.exactLabel || '十五维精准对齐'
   const badgeText =
     `${matchLabel} ${primary.similarity}%` + (primary.exact != null ? ` · ${exactLabel} ${primary.exact}/15` : '')
   ctx.font = '500 20px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
   const badgeW = ctx.measureText(badgeText).width + 40
   roundRect(ctx, (W - badgeW) / 2, y - 16, badgeW, 36, 18)
-  ctx.fillStyle = '#e8f0ea'
+  ctx.fillStyle = '#fde8d4'
   ctx.fill()
-  ctx.fillStyle = '#4c6752'
+  ctx.fillStyle = '#c45c26'
   ctx.fillText(badgeText, W / 2, y + 6)
   y += 44
 
   // Intro
   ctx.font = 'italic 600 22px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-  ctx.fillStyle = '#2c3e2d'
+  ctx.fillStyle = '#3d2f2f'
   const introLines = wrapText(ctx, primary.intro || '', cardW - 80)
   for (const line of introLines) {
     ctx.fillText(line, W / 2, y)
@@ -105,7 +105,7 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
 
     // 维度名
     ctx.font = '600 16px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-    ctx.fillStyle = '#2c3e2d'
+    ctx.fillStyle = '#3d2f2f'
     ctx.fillText(name, barX, y)
 
     // 进度条背景
@@ -113,19 +113,19 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
     const progW = barMaxW - dimNameW - 50
     const progH = 12
     roundRect(ctx, progX, y - 10, progW, progH, 6)
-    ctx.fillStyle = '#e8f0ea'
+    ctx.fillStyle = '#fde8d4'
     ctx.fill()
 
     // 进度条填充
     const fillW = (val / 3) * progW
     roundRect(ctx, progX, y - 10, fillW, progH, 6)
-    ctx.fillStyle = val === 3 ? '#2d7a4a' : val === 2 ? '#4c6752' : '#b8860b'
+    ctx.fillStyle = val === 3 ? '#a34a1e' : val === 2 ? '#c45c26' : '#b8860b'
     ctx.fill()
 
     // 等级标签
     ctx.textAlign = 'right'
     ctx.font = '600 14px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-    ctx.fillStyle = val === 3 ? '#2d7a4a' : val === 2 ? '#4c6752' : '#b8860b'
+    ctx.fillStyle = val === 3 ? '#a34a1e' : val === 2 ? '#c45c26' : '#b8860b'
     ctx.fillText(LEVEL_LABEL[level], barX + barMaxW, y)
     ctx.textAlign = 'left'
 
@@ -137,12 +137,12 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   // 底部水印
   ctx.textAlign = 'center'
   ctx.font = '400 18px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
-  ctx.fillStyle = '#aab8ac'
-  ctx.fillText(ui.shareWatermark || 'ChuangBTI · 创始人整活测评 · 仅供娱乐', W / 2, H - cardY - 24)
+  ctx.fillStyle = '#b5a399'
+  ctx.fillText(ui.shareWatermark || 'CatBTI 猫格测试 · 仅供娱乐', W / 2, H - cardY - 24)
 
   // 下载
   const link = document.createElement('a')
-  link.download = `ChuangBTI-${primary.code}.png`
+  link.download = `CatBTI-${primary.code}.png`
   link.href = canvas.toDataURL('image/png')
   link.click()
 }
@@ -160,9 +160,9 @@ function drawShareRadar(ctx, cx, cy, maxR, userLevels, dimOrder, dimDefs) {
     const r = (lv / 3) * maxR
     ctx.beginPath()
     ctx.arc(cx, cy, r, 0, Math.PI * 2)
-    ctx.fillStyle = lv === 3 ? 'rgba(76,103,82,0.06)' : lv === 2 ? 'rgba(76,103,82,0.04)' : 'rgba(76,103,82,0.02)'
+    ctx.fillStyle = lv === 3 ? 'rgba(196,92,38,0.08)' : lv === 2 ? 'rgba(196,92,38,0.05)' : 'rgba(196,92,38,0.03)'
     ctx.fill()
-    ctx.strokeStyle = 'rgba(76,103,82,0.12)'
+    ctx.strokeStyle = 'rgba(196,92,38,0.15)'
     ctx.lineWidth = 0.5
     ctx.stroke()
   }
@@ -179,7 +179,7 @@ function drawShareRadar(ctx, cx, cy, maxR, userLevels, dimOrder, dimDefs) {
     ctx.beginPath()
     ctx.moveTo(cx, cy)
     ctx.lineTo(x, y)
-    ctx.strokeStyle = 'rgba(76,103,82,0.1)'
+    ctx.strokeStyle = 'rgba(196,92,38,0.12)'
     ctx.lineWidth = 0.5
     ctx.stroke()
 
@@ -187,7 +187,7 @@ function drawShareRadar(ctx, cx, cy, maxR, userLevels, dimOrder, dimDefs) {
     const lx = cx + Math.cos(angle) * lr
     const ly = cy + Math.sin(angle) * lr
     const label = (dimDefs[dimOrder[i]]?.name || dimOrder[i]).replace(/^[A-Za-z0-9]+\s*/, '')
-    ctx.fillStyle = '#6b7b6e'
+    ctx.fillStyle = '#7a6560'
     ctx.fillText(label, lx, ly)
   }
 
@@ -203,9 +203,9 @@ function drawShareRadar(ctx, cx, cy, maxR, userLevels, dimOrder, dimDefs) {
     else ctx.lineTo(x, y)
   }
   ctx.closePath()
-  ctx.fillStyle = 'rgba(76,103,82,0.2)'
+  ctx.fillStyle = 'rgba(196,92,38,0.2)'
   ctx.fill()
-  ctx.strokeStyle = 'rgba(76,103,82,0.6)'
+  ctx.strokeStyle = 'rgba(196,92,38,0.65)'
   ctx.lineWidth = 2
   ctx.stroke()
 
@@ -217,7 +217,7 @@ function drawShareRadar(ctx, cx, cy, maxR, userLevels, dimOrder, dimDefs) {
     const y = cy + Math.sin(angle) * r
     ctx.beginPath()
     ctx.arc(x, y, 3, 0, Math.PI * 2)
-    ctx.fillStyle = '#4c6752'
+    ctx.fillStyle = '#c45c26'
     ctx.fill()
   }
 }

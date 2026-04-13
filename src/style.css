@@ -1,13 +1,13 @@
 /* ========== CSS Variables ========== */
 :root {
-  --bg: #f0f4f1;
+  --bg: #faf6f0;
   --card-bg: #ffffff;
-  --text: #2c3e2d;
-  --text-secondary: #6b7b6e;
-  --accent: #4c6752;
-  --accent-light: #e8f0ea;
-  --accent-hover: #3d5443;
-  --border: #d8e0da;
+  --text: #3d2f2f;
+  --text-secondary: #7a6560;
+  --accent: #c45c26;
+  --accent-light: #fde8d4;
+  --accent-hover: #a34a1e;
+  --border: #ead9cc;
   --radius: 12px;
   --shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   --font: system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
@@ -92,6 +92,15 @@ body {
   margin-top: 20px;
   font-size: 0.85rem;
   color: var(--text-secondary);
+}
+
+.intro-credit .inline-code {
+  font-size: 0.82rem;
+  background: var(--accent-light);
+  color: var(--accent);
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-family: 'SF Mono', 'Fira Code', ui-monospace, monospace;
 }
 
 .intro-note {
@@ -347,13 +356,13 @@ a.btn {
 }
 
 .level-mid {
-  background: #e8f0ea;
-  color: #4c6752;
+  background: var(--accent-light);
+  color: var(--accent);
 }
 
 .level-high {
-  background: #e2f0e8;
-  color: #2d7a4a;
+  background: #fde8d4;
+  color: #a34a1e;
 }
 
 .dim-desc {
