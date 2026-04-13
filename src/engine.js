@@ -78,15 +78,15 @@ export function matchType(userLevels, dimOrder, pattern, maxDistance = 30) {
  * @param {Array}   dimOrder     维度顺序
  * @param {Array}   standardTypes 标准类型数组
  * @param {Array}   specialTypes  特殊类型数组
- * @param {Object}  options      { isDrunk?: boolean, maxDistance?: number, fallbackThreshold?: number }
+ * @param {Object}  options      { isCatnipHigh?: boolean, isDrunk?: boolean, maxDistance?: number, fallbackThreshold?: number }
  * @returns {{ primary: Object, secondary: Object|null, rankings: Array, mode: string }}
  */
 export function determineResult(userLevels, dimOrder, standardTypes, specialTypes, options = {}) {
   const {
-    isDrunk = false,
     maxDistance = 30,
     fallbackThreshold = 60,
   } = options
+  const isCatnipHigh = options.isCatnipHigh ?? options.isDrunk ?? false
 
   const rankings = standardTypes.map((type) => ({
     ...type,
@@ -97,16 +97,16 @@ export function determineResult(userLevels, dimOrder, standardTypes, specialType
   rankings.sort((a, b) => a.distance - b.distance || b.exact - a.exact || b.similarity - a.similarity)
 
   const best = rankings[0]
-  const drunk = specialTypes.find((t) => t.code === 'DRUNK')
+  const catnipType = specialTypes.find((t) => t.code === 'SIAMNIP')
   const hhhh = specialTypes.find((t) => t.code === 'HHHH')
 
-  // 猫薄荷嗨猫（DRUNK）覆盖
-  if (isDrunk && drunk) {
+  // 猫薄荷彩蛋（SIAMNIP）覆盖
+  if (isCatnipHigh && catnipType) {
     return {
-      primary: { ...drunk, similarity: best.similarity, exact: best.exact },
+      primary: { ...catnipType, similarity: best.similarity, exact: best.exact },
       secondary: best,
       rankings,
-      mode: 'drunk',
+      mode: 'catnip',
     }
   }
 

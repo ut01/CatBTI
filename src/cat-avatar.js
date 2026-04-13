@@ -25,7 +25,7 @@ const THEMES = {
   BOMBAY: { fur: '#232323', inner: '#d4a78f', accent: '#f1da78', pattern: 'solid', mood: 'sleepy', accessory: 'moon' },
   HIMALAYAN: { fur: '#ece0d8', inner: '#f5c9b8', accent: '#71534a', pattern: 'point', mood: 'soft', accessory: 'flower' },
   HHHH: { fur: '#e3d0b7', inner: '#f4cab0', accent: '#8e6d58', pattern: 'patchwork', mood: 'wink', accessory: 'question' },
-  DRUNK: { fur: '#e7d9c8', inner: '#f5c6af', accent: '#6e4f48', pattern: 'point', mood: 'dizzy', accessory: 'catnip' },
+  SIAMNIP: { fur: '#e7d9c8', inner: '#f5c6af', accent: '#6e4f48', pattern: 'point', mood: 'dizzy', accessory: 'catnip' },
 }
 
 export function getCatAvatar(type) {

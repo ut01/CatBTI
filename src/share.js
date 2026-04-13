@@ -60,8 +60,8 @@ export async function generateShareImage(primary, userLevels, dimOrder, dimDefs,
   ctx.font = '400 22px system-ui, "PingFang SC", "Microsoft YaHei", sans-serif'
   ctx.fillStyle = '#7a6560'
   const kickerText =
-    mode === 'drunk'
-      ? ui.resultKickerDrunk || '猫薄荷彩蛋 · CatBTI 隐藏款'
+    mode === 'catnip' || mode === 'drunk'
+      ? ui.resultKickerCatnip || ui.resultKickerDrunk || '猫薄荷彩蛋 · CatBTI 隐藏款'
       : mode === 'fallback'
         ? ui.resultKickerFallback || '十五维对不上猫粮 · CatBTI 兜底款'
         : ui.resultKickerNormal || '你的 CatBTI 主猫格'

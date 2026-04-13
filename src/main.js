@@ -27,11 +27,11 @@ async function init() {
     window.scrollTo(0, 0)
   }
 
-  function onQuizComplete(answers, isDrunk) {
+  function onQuizComplete(answers, isCatnipHigh) {
     const scores = calcDimensionScores(answers, questions.main)
     const levels = scoresToLevels(scores, config.scoring.levelThresholds)
     const result = determineResult(levels, dimensions.order, types.standard, types.special, {
-      isDrunk,
+      isCatnipHigh,
       maxDistance: config.scoring.maxDistance,
       fallbackThreshold: config.scoring.fallbackThreshold,
     })
@@ -99,18 +99,18 @@ function getPreviewResult(searchParams, dimOrder, dimDefs, types) {
   const standard = types.standard || []
   const special = types.special || []
 
-  if (preview === 'drunk') {
+  if (preview === 'catnip' || preview === 'drunk') {
     const secondary = standard.find((type) => type.code === 'SIAMESE') || standard[0]
-    const drunk = special.find((type) => type.code === 'DRUNK')
-    if (!drunk || !secondary) return null
+    const catnipType = special.find((type) => type.code === 'SIAMNIP')
+    if (!catnipType || !secondary) return null
 
     return {
       levels: levelsFromType(secondary, dimOrder),
       result: {
-        primary: { ...drunk, similarity: 80, exact: 9 },
+        primary: { ...catnipType, similarity: 80, exact: 9 },
         secondary: { ...secondary, similarity: 76, exact: 8 },
         rankings: standard.map((type, index) => ({ ...type, similarity: Math.max(52, 80 - index * 3) })),
-        mode: 'drunk',
+        mode: 'catnip',
       },
     }
   }

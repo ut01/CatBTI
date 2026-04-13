@@ -23,7 +23,7 @@
       "introTitleHtml": "CatBTI（猫BTI）<br/>测一测你是什么猫",
       "introLead": "测的是你在猫砂盆边、窗台、粮碗和人类腿边的「猫格」脑回路。整活向 CatBTI，不是 MBTI。",
       "resultKickerNormal": "你的 CatBTI 主猫格",
-      "resultKickerDrunk": "猫薄荷彩蛋 · CatBTI 隐藏款",
+      "resultKickerCatnip": "猫薄荷彩蛋 · CatBTI 隐藏款",
       "resultKickerFallback": "十五维对不上猫粮 · CatBTI 兜底款",
       "dimensionsSectionTitle": "十五维 · 本喵自画像（CatBTI）",
       "topListTitle": "同频撸猫榜 TOP 5",
@@ -41,9 +41,9 @@
       "shareWatermark": "CatBTI（猫BTI）· 测一测你是什么猫 · 仅供娱乐"
     }
   },
-  "drinkGate": {
-    "questionId": "drink_gate_q1",
+  "catnipGate": {
+    "questionId": "catnip_gate_q1",
     "triggerValue": 3,
-    "drunkTriggerValue": 2
+    "nipTriggerValue": 2
   }
 }

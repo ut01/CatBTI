@@ -5,13 +5,14 @@ import { shuffle, insertAtRandom, insertAfter } from './utils.js'
  */
 export function createQuiz(questions, config, onComplete) {
   const mainQuestions = shuffle(questions.main)
-  const drinkGateQ1 = questions.special.find((q) => q.id === config.drinkGate.questionId)
-  const drinkGateQ2 = questions.special.find((q) => q.id === 'drink_gate_q2')
+  const gate = config.catnipGate || config.drinkGate
+  const catnipGateQ1 = questions.special.find((q) => q.id === gate.questionId)
+  const catnipGateQ2 = questions.special.find((q) => q.id === 'catnip_gate_q2' || q.id === 'drink_gate_q2')
 
-  let queue = insertAtRandom(mainQuestions, drinkGateQ1)
+  let queue = insertAtRandom(mainQuestions, catnipGateQ1)
   let current = 0
   let answers = {}
-  let isDrunk = false
+  let isCatnipHigh = false
 
   const els = {
     fill: document.getElementById('progress-fill'),
@@ -49,19 +50,21 @@ export function createQuiz(questions, config, onComplete) {
   function selectOption(question, option) {
     answers[question.id] = option.value
 
-    // 猫薄荷门：若选聚众嗨局（值同 config.drinkGate.triggerValue），插入追问
-    if (question.id === config.drinkGate.questionId && option.value === config.drinkGate.triggerValue) {
-      queue = insertAfter(queue, question.id, drinkGateQ2)
+    const nipVal = gate.nipTriggerValue ?? gate.drunkTriggerValue
+
+    // 猫薄荷门：若选薄荷激光局（值同 gate.triggerValue），插入追问
+    if (question.id === gate.questionId && option.value === gate.triggerValue) {
+      queue = insertAfter(queue, question.id, catnipGateQ2)
     }
 
-    // 猫薄荷嗨猫（DRUNK）检测
-    if (question.id === 'drink_gate_q2' && option.value === config.drinkGate.drunkTriggerValue) {
-      isDrunk = true
+    // 猫薄荷彩蛋（SIAMNIP）检测
+    if ((question.id === 'catnip_gate_q2' || question.id === 'drink_gate_q2') && option.value === nipVal) {
+      isCatnipHigh = true
     }
 
     current++
     if (current >= totalCount()) {
-      onComplete(answers, isDrunk)
+      onComplete(answers, isCatnipHigh)
     } else {
       renderQuestion()
     }
@@ -70,8 +73,8 @@ export function createQuiz(questions, config, onComplete) {
   function start() {
     current = 0
     answers = {}
-    isDrunk = false
-    queue = insertAtRandom(shuffle(questions.main), drinkGateQ1)
+    isCatnipHigh = false
+    queue = insertAtRandom(shuffle(questions.main), catnipGateQ1)
     renderQuestion()
   }
 

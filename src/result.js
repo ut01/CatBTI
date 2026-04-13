@@ -14,7 +14,9 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
 
   // Kicker
   const kicker = document.getElementById('result-kicker')
-  if (mode === 'drunk') kicker.textContent = ui.resultKickerDrunk || '猫薄荷彩蛋已触发'
+  if (mode === 'catnip' || mode === 'drunk') {
+    kicker.textContent = ui.resultKickerCatnip || ui.resultKickerDrunk || '猫薄荷彩蛋已触发'
+  }
   else if (mode === 'fallback') kicker.textContent = ui.resultKickerFallback || '十五维对不上猫粮 · 已兜底'
   else kicker.textContent = ui.resultKickerNormal || '你的 CatBTI 主猫格'
 
@@ -45,7 +47,7 @@ export function renderResult(result, userLevels, dimOrder, dimDefs, config) {
 
   // 次要匹配
   const secEl = document.getElementById('result-secondary')
-  if (secondary && (mode === 'drunk' || mode === 'fallback')) {
+  if (secondary && (mode === 'catnip' || mode === 'drunk' || mode === 'fallback')) {
     secEl.style.display = ''
     document.getElementById('secondary-info').textContent =
       `${secondary.code}（${secondary.cn}）· ${matchLabel} ${secondary.similarity}%`
